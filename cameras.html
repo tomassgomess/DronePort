@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DronePort Security Cameras</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f9ff;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #0056b3; /* Azul */
+      background: linear-gradient(to right, #0056b3, #0056b3, #0056b3);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 35px 0;
+    }
+
+    .camera-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 40px 180px;
+    }
+
+    iframe {
+      width: 640px;
+      height: 480px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+    }
+
+    .camera {
+      text-align: center;
+    }
+
+    .corner-images {
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .corner-images img {
+      position: absolute;
+      width: 300px;
+      height: auto;
+    }
+
+    .corner-images .left {
+      left: 30px;
+    }
+
+    .corner-images .right {
+      right: 30px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="corner-images">
+    <img src="isrlogo.png" alt="Left Image" class="left">
+    <img src="Logo UC.png" alt="Right Image" class="right">
+  </div>
+  <h1>DronePort Security Cameras</h1>
+  <div class="camera-container">
+    <div class="camera">
+      <iframe src="http://192.168.0.40" frameborder="0" allowfullscreen></iframe>
+      <h4>Camera 1: Outdoor View</h4>
+    </div>
+    <div class="camera">
+      <iframe src="http://192.168.0.1" frameborder="0" allowfullscreen></iframe>
+      <h4>Camera 2: Inside View</h4>
+    </div>
+  </div>
+</body>
+</html>
